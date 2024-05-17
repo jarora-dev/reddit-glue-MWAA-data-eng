@@ -1,0 +1,22 @@
+[2024-05-17T04:25:17.391+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-17T04:25:17.435+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: reddit_etl_pipeline.extract_reddit manual__2024-05-17T04:24:27.101626+00:00 [queued]>
+[2024-05-17T04:25:17.445+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: reddit_etl_pipeline.extract_reddit manual__2024-05-17T04:24:27.101626+00:00 [queued]>
+[2024-05-17T04:25:17.447+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-05-17T04:25:17.463+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extract_reddit> on 2024-05-17 04:24:27.101626+00:00
+[2024-05-17T04:25:17.470+0000] {standard_task_runner.py:63} INFO - Started process 47 to run task
+[2024-05-17T04:25:17.474+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'reddit_etl_pipeline', 'extract_reddit', 'manual__2024-05-17T04:24:27.101626+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/reddit_dag.py', '--cfg-path', '/tmp/tmplh032i0v']
+[2024-05-17T04:25:17.477+0000] {standard_task_runner.py:91} INFO - Job 7: Subtask extract_reddit
+[2024-05-17T04:25:17.502+0000] {warnings.py:109} WARNING - /home/airflow/.local/lib/python3.9/site-packages/airflow/settings.py:195: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2024-05-17T04:25:17.572+0000] {task_command.py:426} INFO - Running <TaskInstance: reddit_etl_pipeline.extract_reddit manual__2024-05-17T04:24:27.101626+00:00 [running]> on host 3b0b4ff62197
+[2024-05-17T04:25:17.649+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='reddit_etl_pipeline' AIRFLOW_CTX_TASK_ID='extract_reddit' AIRFLOW_CTX_EXECUTION_DATE='2024-05-17T04:24:27.101626+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-17T04:24:27.101626+00:00'
+[2024-05-17T04:25:17.651+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-17T04:25:17.749+0000] {logging_mixin.py:188} INFO - Connected to Reddit API successfully!
+[2024-05-17T04:25:17.751+0000] {logging_mixin.py:188} INFO - <praw.models.listing.generator.ListingGenerator object at 0xffff88f63e50>
+[2024-05-17T04:25:17.752+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-05-17T04:25:17.753+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-17T04:25:17.760+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=reddit_etl_pipeline, task_id=extract_reddit, run_id=manual__2024-05-17T04:24:27.101626+00:00, execution_date=20240517T042427, start_date=20240517T042517, end_date=20240517T042517
+[2024-05-17T04:25:17.808+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-17T04:25:17.821+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-17T04:25:17.824+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
